@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Header from "@/components/Header/Header";
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+      <Header />
+      <main></main>
     </>
   );
 }
