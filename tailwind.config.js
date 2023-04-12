@@ -14,6 +14,8 @@ module.exports = {
         darkAccent: "#004BA8",
         darkError: "#ED254E",
         darkSuccess: "#37FF8B",
+        darkLinear:
+          "linear-gradient(225deg, rgba(254,254,255,1) 0%, rgba(0,75,168,1) 100%)",
       },
     },
   },
