@@ -1,7 +1,7 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
-import HeaderMenu from "../HeaderMenu/HeaderMenu";
-import HeaderMobileMenu from "../HeaderMobileMenu/HeaderMobileMenu";
+import HeaderMenu from "@/components/Header/components/HeaderMenu/HeaderMenu";
+import HeaderMobileMenu from "@/components/Header/components/HeaderMobileMenu/HeaderMobileMenu";
 
 export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
