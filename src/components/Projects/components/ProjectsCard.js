@@ -14,14 +14,14 @@ export default function ProjectsCard({ project }) {
           ))}
         </ul>
         <p className="mb-4">{project.description}</p>
-        <div className="my-2">
-          <a className="mr-4" href={project.siteLink} target="_blank">
-            <button className="bg-darkAccent hover:bg-darkAccent/70 transition-all duration-300 uppercase text-darkHeading p-2 mr-4">
+        <div className="my-2 flex justify-between flex-wrap gap-y-4">
+          <a href={project.siteLink} target="_blank">
+            <button className="bg-darkAccent hover:bg-darkAccent/70 transition-all duration-300 uppercase text-darkHeading p-2">
               Voir le projet
             </button>
           </a>
           <a href={project.codeLink} target="_blank">
-            <button className="bg-darkAccent hover:bg-darkAccent/70 transition-all duration-300 uppercase text-darkHeading p-2 mr-4">
+            <button className="bg-darkAccent hover:bg-darkAccent/70 transition-all duration-300 uppercase text-darkHeading p-2">
               Voir le code
             </button>
           </a>
