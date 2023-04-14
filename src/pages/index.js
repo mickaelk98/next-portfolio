@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "@/components/Header/Header";
 import HeroSection from "@/components/HeroSection/HeroSection";
+import Projects from "@/components/Projects/Projects";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <main>
         <HeroSection />
+        <Projects />
       </main>
     </>
   );
