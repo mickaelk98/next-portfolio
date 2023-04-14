@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         darkBg: "#121212",
         darkSecondary: "#303030",
+        darkTertiary: "#424242",
         darkHeading: "#fefeff",
         darkText: "#bebfbe",
         darkAccent: "#004BA8",

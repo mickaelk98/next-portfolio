@@ -3,7 +3,7 @@ import { AiFillMail } from "react-icons/ai";
 
 export default function Conatct() {
   return (
-    <section className="bg-darkBg text-darkText text-lg pt-[300px] pb-20">
+    <section className="bg-darkSecondary text-darkText text-lg h-screen flex items-center justify-center">
       <div className="px-2 max-w-7xl mx-auto">
         <div className="w-full flex flex-col lg:flex-row lg:items-start lg:justify-center gap-5">
           <div className="text-left mb-10 lg:max-w-[300px]">
@@ -30,7 +30,7 @@ export default function Conatct() {
             </ul>
           </div>
           <div className="flex items-center justify-center w-full lg:max-w-[400px]">
-            <form className="w-full max-w-[400px] bg-darkSecondary rounded-md p-5 flex flex-col gap-8">
+            <form className="w-full max-w-[400px] bg-darkTertiary rounded-md p-5 flex flex-col gap-8">
               <div className="flex flex-col gap-2">
                 <label htmlFor="name">Votre Nom</label>
                 <input
