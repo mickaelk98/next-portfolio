@@ -2,7 +2,10 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function HeroSection() {
   return (
-    <section className="hero-section bg-darkBg bg-[url(/dark-bg.jpg)] bg-center bg-cover ">
+    <section
+      id="home"
+      className="hero-section bg-darkBg bg-[url(/dark-bg.jpg)] bg-center bg-cover "
+    >
       <div className="lg:relative max-w-7xl mx-auto px-2 xl:px-0 h-[calc(100vh_-_68px)] flex flex-col items-center justify-center text-center lg:flex-row-reverse">
         <div>
           <h1 className="text-3xl mb-10 text-darkHeading">

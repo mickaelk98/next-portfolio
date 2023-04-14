@@ -3,7 +3,10 @@ import { AiFillMail } from "react-icons/ai";
 
 export default function Conatct() {
   return (
-    <section className="bg-darkSecondary text-darkText text-lg h-screen flex items-center justify-center">
+    <section
+      id="contact"
+      className="bg-darkSecondary text-darkText text-lg h-screen flex items-center justify-center"
+    >
       <div className="px-2 max-w-7xl mx-auto">
         <div className="w-full flex flex-col lg:flex-row lg:items-start lg:justify-center gap-5">
           <div className="text-left mb-10 lg:max-w-[300px]">

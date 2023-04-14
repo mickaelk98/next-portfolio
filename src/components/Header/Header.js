@@ -11,7 +11,7 @@ export default function Header() {
       <div className="flex items-center justify-between py-4 px-2 xl:px-0 max-w-7xl mx-auto">
         <a
           className="text-3xl cursor-pointer hover:text-darkText transition-all duration-300"
-          href="#"
+          href="#home"
         >
           <h1>Mickael Keita</h1>
         </a>

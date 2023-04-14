@@ -8,14 +8,14 @@ export default function HeaderMobileMenu({ hideHeaderMobileMenu }) {
         onClick={hideHeaderMobileMenu}
       />
       <ul className="flex items-center justify-center flex-col gap-24 text-5xl h-screen w-full">
-        <li className="cursor-pointer hover:text-darkText transition-all duration-300">
-          Accueil
+        <li className="hover:text-darkText transition-all duration-300">
+          <a href="#home">Accueil</a>
         </li>
-        <li className="cursor-pointer hover:text-darkText transition-all duration-300">
-          Projets
+        <li className="hover:text-darkText transition-all duration-300">
+          <a href="#projects">Projets</a>
         </li>
-        <li className="cursor-pointer hover:text-darkText transition-all duration-300">
-          Contact
+        <li className="hover:text-darkText transition-all duration-300">
+          <a href="#contact">Contact</a>
         </li>
       </ul>
     </nav>
