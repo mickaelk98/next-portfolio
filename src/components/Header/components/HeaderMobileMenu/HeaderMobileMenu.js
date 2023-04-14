@@ -9,13 +9,19 @@ export default function HeaderMobileMenu({ hideHeaderMobileMenu }) {
       />
       <ul className="flex items-center justify-center flex-col gap-24 text-5xl h-screen w-full">
         <li className="hover:text-darkText transition-all duration-300">
-          <a href="#home">Accueil</a>
+          <a onClick={hideHeaderMobileMenu} href="#home">
+            Accueil
+          </a>
         </li>
         <li className="hover:text-darkText transition-all duration-300">
-          <a href="#projects">Projets</a>
+          <a onClick={hideHeaderMobileMenu} href="#projects">
+            Projets
+          </a>
         </li>
         <li className="hover:text-darkText transition-all duration-300">
-          <a href="#contact">Contact</a>
+          <a onClick={hideHeaderMobileMenu} href="#contact">
+            Contact
+          </a>
         </li>
       </ul>
     </nav>
