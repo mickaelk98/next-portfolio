@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="lg:relative max-w-7xl mx-auto px-2 xl:px-0 h-[calc(100vh_-_68px)] flex flex-col items-center justify-center text-center lg:flex-row-reverse">
         <div>
           <h1 className="text-3xl mb-10 text-darkHeading">
-            Salut, je suis{" "}
+            Salut, je suis
             <span className="text-darkAccent">Mickael Keita</span>
             développeur web.
           </h1>
@@ -22,7 +22,7 @@ export default function HeroSection() {
           </p>
           <div className="mb-40">
             <button className="bg-darkAccent hover:bg-darkAccent/70 transition-all duration-300 uppercase text-darkHeading p-2 mr-4">
-              Me contacter
+              <a href="#contact"> Me contacter</a>
             </button>
             <button className="bg-darkAccent hover:bg-darkAccent/70 transition-all duration-300 uppercase text-darkHeading p-2">
               telechager cv
@@ -34,10 +34,17 @@ export default function HeroSection() {
           <div className="w-2/5 h-1 bg-gradient-to-l from-darkHeading to-darkAccent lg:bg-gradient-to-t lg:absolute lg:top-6 lg:left-4 lg:w-1 lg:h-[200px]"></div>
           <ul className="flex gap-5 lg:my-5 mx-5 text-2xl lg:flex-col lg:justify-start lg:absolute lg:top-[220px] lg:-left-4">
             <li className="cursor-pointer hover:scale-110">
-              <BsGithub />
+              <a href="https://github.com/mickaelk98" target="_blank">
+                <BsGithub />
+              </a>
             </li>
             <li className="cursor-pointer hover:scale-110">
-              <BsLinkedin />
+              <a
+                href="https://www.linkedin.com/in/mickael-keita/"
+                target="_blank"
+              >
+                <BsLinkedin />
+              </a>
             </li>
           </ul>
           <div className="w-2/5 h-1 bg-gradient-to-r from-darkHeading to-darkAccent lg:bg-gradient-to-b lg:absolute lg:top-[330px] lg:left-4 lg:w-1 lg:h-[200px]"></div>

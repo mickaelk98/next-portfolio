@@ -25,10 +25,17 @@ export default function Conatct() {
             </p>
             <ul className="mt-10 text-2xl text-darkHeading flex items-center justify-center lg:justify-evenly gap-5">
               <li className="cursor-pointer hover:scale-110">
-                <BsGithub />
+                <a href="https://github.com/mickaelk98" target="_blank">
+                  <BsGithub />
+                </a>
               </li>
               <li className="cursor-pointer hover:scale-110">
-                <BsLinkedin />
+                <a
+                  href="https://www.linkedin.com/in/mickael-keita/"
+                  target="_blank"
+                >
+                  <BsLinkedin />
+                </a>
               </li>
             </ul>
           </div>
