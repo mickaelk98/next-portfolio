@@ -22,6 +22,10 @@ export default function Conatct() {
       .string()
       .required("Ce champ est obligatoire")
       .email("Votre saisie ne correspond pas a une adresse email"),
+    subject: yup
+      .string()
+      .required("Ce champ est obligatoire")
+      .max(30, "votre sujet est trop long"),
     message: yup
       .string()
       .required("Ce champ est obligatoire")
@@ -37,6 +41,7 @@ export default function Conatct() {
     defaultValues: {
       name: "",
       email: "",
+      subject: "",
       message: "",
     },
     resolver: yupResolver(schema),
@@ -49,6 +54,7 @@ export default function Conatct() {
       const templateParams = {
         name: formValue.name,
         email: formValue.email,
+        subject: formValue.subject,
         message: formValue.message,
       };
 
@@ -79,7 +85,7 @@ export default function Conatct() {
   return (
     <section
       id="contact"
-      className="bg-darkSecondary text-darkText text-lg h-screen flex flex-col items-center justify-center lg:justify-around"
+      className="bg-darkSecondary text-darkText text-lg py-10 min-h-screen flex flex-col items-center justify-center lg:justify-around"
     >
       {messageHasBeenSent && (
         <div className="flex items-center justify-center w-full">
@@ -126,14 +132,13 @@ export default function Conatct() {
               onSubmit={handleSubmit(sendMessage)}
             >
               <div className="flex flex-col gap-2">
-                <label htmlFor="name">Votre Nom</label>
                 <input
                   {...register("name")}
-                  className={`outline-none p-1 text-darkSecondary ${
+                  className={`outline-none p-2 text-darkSecondary ${
                     errors.name ? "border border-darkError" : ""
                   }`}
                   type="text"
-                  id="name"
+                  placeholder="votre nom"
                 />
                 {errors.name && (
                   <small className="text-darkError text-lg text-center">
@@ -143,14 +148,13 @@ export default function Conatct() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="email">Votre Email</label>
                 <input
                   {...register("email")}
-                  className={`outline-none p-1 text-darkSecondary ${
+                  className={`outline-none p-2 text-darkSecondary ${
                     errors.email ? "border border-darkError" : ""
                   }`}
                   type="email"
-                  id="email"
+                  placeholder="votre email"
                 />
                 {errors.email && (
                   <small className="text-darkError text-lg text-center">
@@ -160,13 +164,28 @@ export default function Conatct() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="message">Votre message</label>
+                <input
+                  {...register("subject")}
+                  className={`outline-none p-2 text-darkSecondary ${
+                    errors.subject ? "border border-darkError" : ""
+                  }`}
+                  type="text"
+                  placeholder="Le sujet de votre message"
+                />
+                {errors.subject && (
+                  <small className="text-darkError text-lg text-center">
+                    {errors.subject.message}
+                  </small>
+                )}
+              </div>
+
+              <div className="flex flex-col gap-2">
                 <textarea
                   {...register("message")}
-                  className={`outline-none p-1 h-40 resize-none text-darkSecondary ${
+                  className={`outline-none p-2 h-40 resize-none text-darkSecondary ${
                     errors.message ? "border border-darkError" : ""
                   }`}
-                  id="message"
+                  placeholder="votre message"
                 ></textarea>
                 {errors.message && (
                   <small className="text-darkError text-lg text-center">
