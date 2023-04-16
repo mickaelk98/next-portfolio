@@ -1,6 +1,43 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { BsGithub } from "react-icons/bs";
 import { FcContacts } from "react-icons/fc";
+
+const presentationVariant = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      delay: 0.8,
+    },
+  },
+};
+
+const socialNetworkContainerVariant = {
+  initial: {
+    y: "100vh",
+  },
+  animate: {
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 1,
+    },
+  },
+};
+
+const socialNetworkVariant = {
+  hover: {
+    scale: 1.1,
+    transition: {
+      repeatType: "mirror",
+      repeat: Infinity,
+    },
+  },
+};
 
 export default function HeroSection() {
   return (
@@ -9,7 +46,12 @@ export default function HeroSection() {
       className="hero-section bg-[url(/dark-bg.jpg)] bg-center bg-cover "
     >
       <div className="max-w-7xl mx-auto px-2 xl:px-0 h-[calc(100vh_-_68px)] flex flex-col items-start justify-evenly text-center">
-        <div className="lg:text-left">
+        <motion.div
+          variants={presentationVariant}
+          initial="initial"
+          animate="animate"
+          className="lg:text-left"
+        >
           <h1 className="text-3xl mb-10 text-darkHeading">
             Salut, je suis
             <span className="text-darkAccent">Mickael Keita</span>
@@ -22,31 +64,52 @@ export default function HeroSection() {
             verrez différents projets que j&apos;ai réalisés sur des
             technologies telles que JAVASCRIPT et REACT
           </p>
-        </div>
+        </motion.div>
         <div>
-          <ul className="text-3xl flex items-center gap-2">
-            <li className="text-darkText bg-darkSecondary p-2">
+          <motion.ul
+            variants={socialNetworkContainerVariant}
+            initial="initial"
+            animate="animate"
+            className="text-3xl flex items-center gap-2"
+          >
+            <motion.li
+              variants={socialNetworkVariant}
+              whileHover="hover"
+              className="text-darkText bg-darkSecondary p-2"
+            >
               <a href="https://github.com/mickaelk98" target="_blank">
                 <BsGithub />
               </a>
-            </li>
-            <li className="bg-darkAccent w-[46px] h-[46px] flex items-center justify-center">
+            </motion.li>
+            <motion.li
+              variants={socialNetworkVariant}
+              whileHover="hover"
+              className="bg-darkAccent w-[46px] h-[46px] flex items-center justify-center"
+            >
               <a
                 href="https://www.linkedin.com/in/mickael-keita/"
                 target="_blank"
               >
                 <span className="font-bold text-darkHeading m-auto">in</span>
               </a>
-            </li>
-            <li className="bg-darkSecondary p-2">
+            </motion.li>
+            <motion.li
+              variants={socialNetworkVariant}
+              whileHover="hover"
+              className="bg-darkSecondary p-2"
+            >
               <Link href="/contact">
                 <FcContacts />
               </Link>
-            </li>
-            <li className="bg-darkSecondary w-[46px] h-[46px] flex items-center justify-center cursor-pointer text-darkHeading font-bold p-2">
+            </motion.li>
+            <motion.li
+              variants={socialNetworkVariant}
+              whileHover="hover"
+              className="bg-darkSecondary w-[46px] h-[46px] flex items-center justify-center cursor-pointer text-darkHeading font-bold p-2"
+            >
               cv
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
         </div>
       </div>
     </section>
