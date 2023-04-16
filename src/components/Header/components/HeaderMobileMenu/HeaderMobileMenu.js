@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { RxCross1 } from "react-icons/rx";
 
 export default function HeaderMobileMenu({ hideHeaderMobileMenu }) {
@@ -9,19 +10,13 @@ export default function HeaderMobileMenu({ hideHeaderMobileMenu }) {
       />
       <ul className="flex items-center justify-center flex-col gap-24 text-5xl h-screen w-full">
         <li className="hover:text-darkText transition-all duration-300">
-          <a onClick={hideHeaderMobileMenu} href="#home">
-            Accueil
-          </a>
+          <Link href="/">Accueil</Link>
         </li>
         <li className="hover:text-darkText transition-all duration-300">
-          <a onClick={hideHeaderMobileMenu} href="#projects">
-            Projets
-          </a>
+          <Link href="/projects">Projets</Link>
         </li>
         <li className="hover:text-darkText transition-all duration-300">
-          <a onClick={hideHeaderMobileMenu} href="#contact">
-            Contact
-          </a>
+          <Link href="/contact">Contact</Link>
         </li>
       </ul>
     </nav>
