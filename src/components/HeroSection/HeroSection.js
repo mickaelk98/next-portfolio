@@ -1,13 +1,15 @@
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import Link from "next/link";
+import { BsGithub } from "react-icons/bs";
+import { FcContacts } from "react-icons/fc";
 
 export default function HeroSection() {
   return (
     <section
       id="home"
-      className="hero-section bg-darkBg bg-[url(/dark-bg.jpg)] bg-center bg-cover "
+      className="hero-section bg-[url(/dark-bg.jpg)] bg-center bg-cover "
     >
-      <div className="lg:relative max-w-7xl mx-auto px-2 xl:px-0 h-[calc(100vh_-_68px)] flex flex-col items-center justify-center text-center lg:flex-row-reverse">
-        <div>
+      <div className="max-w-7xl mx-auto px-2 xl:px-0 h-[calc(100vh_-_68px)] flex flex-col items-start justify-evenly text-center">
+        <div className="lg:text-left">
           <h1 className="text-3xl mb-10 text-darkHeading">
             Salut, je suis
             <span className="text-darkAccent">Mickael Keita</span>
@@ -20,34 +22,31 @@ export default function HeroSection() {
             verrez différents projets que j&apos;ai réalisés sur des
             technologies telles que JAVASCRIPT et REACT
           </p>
-          <div className="mb-40">
-            <button className="bg-darkAccent hover:bg-darkAccent/70 transition-all duration-300 uppercase text-darkHeading p-2 mr-4">
-              <a href="#contact"> Me contacter</a>
-            </button>
-            <button className="bg-darkAccent hover:bg-darkAccent/70 transition-all duration-300 uppercase text-darkHeading p-2">
-              telechager cv
-            </button>
-          </div>
         </div>
-        <div className="w-full text-white flex items-center lg:w-[100px] lg:flex-col">
-          <div className="w-5 h-5 bg-darkAccent rounded-full lg:absolute lg:top-[10px] lg:left-2"></div>
-          <div className="w-2/5 h-1 bg-gradient-to-l from-darkHeading to-darkAccent lg:bg-gradient-to-t lg:absolute lg:top-6 lg:left-4 lg:w-1 lg:h-[200px]"></div>
-          <ul className="flex gap-5 lg:my-5 mx-5 text-2xl lg:flex-col lg:justify-start lg:absolute lg:top-[220px] lg:-left-4">
-            <li className="cursor-pointer hover:scale-110">
+        <div>
+          <ul className="text-3xl flex items-center gap-2">
+            <li className="text-darkText bg-darkSecondary p-2">
               <a href="https://github.com/mickaelk98" target="_blank">
                 <BsGithub />
               </a>
             </li>
-            <li className="cursor-pointer hover:scale-110">
+            <li className="bg-darkAccent w-[46px] h-[46px] flex items-center justify-center">
               <a
                 href="https://www.linkedin.com/in/mickael-keita/"
                 target="_blank"
               >
-                <BsLinkedin />
+                <span className="font-bold text-darkHeading m-auto">in</span>
               </a>
             </li>
+            <li className="bg-darkSecondary p-2">
+              <Link href="/contact">
+                <FcContacts />
+              </Link>
+            </li>
+            <li className="bg-darkSecondary w-[46px] h-[46px] flex items-center justify-center cursor-pointer text-darkHeading font-bold p-2">
+              cv
+            </li>
           </ul>
-          <div className="w-2/5 h-1 bg-gradient-to-r from-darkHeading to-darkAccent lg:bg-gradient-to-b lg:absolute lg:top-[330px] lg:left-4 lg:w-1 lg:h-[200px]"></div>
         </div>
       </div>
     </section>
