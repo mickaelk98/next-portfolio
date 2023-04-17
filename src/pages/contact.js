@@ -7,6 +7,7 @@ import { AiFillMail, AiFillCheckCircle } from "react-icons/ai";
 import { useState } from "react";
 import Header from "@/components/Header/Header";
 import SocialNetWork from "@/components/SocialNetwork/SocialNetWork";
+import TransitionEffect from "@/components/TransitionEffect/TransitionEffect";
 
 export default function Conatct() {
   const [isLoading, setIsLoading] = useState(false);
@@ -86,6 +87,7 @@ export default function Conatct() {
 
   return (
     <>
+      <TransitionEffect />
       <Header />
       <section
         id="contact"

@@ -1,9 +1,11 @@
 import Header from "@/components/Header/Header";
 import ProjectsList from "@/components/Projects/components/ProjectsList";
+import TransitionEffect from "@/components/TransitionEffect/TransitionEffect";
 
 export default function Projects() {
   return (
     <>
+      <TransitionEffect />
       <Header />
       <section
         id="projects"
