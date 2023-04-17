@@ -56,7 +56,7 @@ export default function HeaderMobileMenu({ hideHeaderMobileMenu }) {
     <motion.nav
       variants={mobileNavVariant}
       animate={animation}
-      className="fixed top-0 left-0 h-screen w-full bg-primary text-black flex flex-col items-end"
+      className="mobile-nav z-10 fixed top-0 left-0 h-screen w-full text-black flex flex-col items-end"
     >
       <RxCross1
         className="text-5xl mt-5 mr-5 cursor-pointer hover:text-darkText transition-all duration-300"
