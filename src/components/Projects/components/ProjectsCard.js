@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ProjectsCard({ project }) {
   return (
-    <article className="mb-10 text-text max-w-[400px] shadow-lg rounded-md">
+    <article className="mb-10 text-text dark:text-darkHeading dark:bg-darkSecondary max-w-[400px] shadow-lg rounded-md">
       <div className="max-h-44 overflow-hidden">
         <Image src={project.image} alt="image" width={400} height={400} />
       </div>
@@ -13,7 +13,7 @@ export default function ProjectsCard({ project }) {
             <li key={technologie}>{technologie}</li>
           ))}
         </ul>
-        <p className="mb-4">{project.description}</p>
+        <p className="mb-4 dark:text-darkText">{project.description}</p>
         <div className="my-2 flex justify-between flex-wrap gap-y-4">
           <a href={project.siteLink} target="_blank">
             <button className="bg-accent hover:bg-accent/70 transition-all duration-300 uppercase text-heading p-2">

@@ -89,19 +89,19 @@ export default function Conatct() {
       <Header />
       <section
         id="contact"
-        className="text-text text-lg py-10 min-h-[calc(100vh_-_68px)] flex flex-col items-center justify-center lg:justify-around"
+        className="text-text dark:bg-darkPrimary text-lg py-10 min-h-[calc(100vh_-_68px)] flex flex-col items-center justify-center lg:justify-around"
       >
         {messageHasBeenSent && (
           <div className="flex items-center justify-center w-full">
-            <div className="flex items-center gap-5 bg-success text-secondary w-11/12 max-w-xs pl-2 py-2 rounded-md">
+            <div className="flex items-center gap-5 bg-success text-text dark:text-secondary w-11/12 max-w-xs pl-2 py-2 rounded-md">
               <AiFillCheckCircle /> Votre message a bien été envoyé.
             </div>
           </div>
         )}
         <div className="px-2 max-w-7xl mx-auto">
           <div className="w-ful flex flex-col lg:flex-row lg:items-start lg:justify-center gap-5">
-            <div className="text-left px-4 mb-10 w-11/12 lg:max-w-[600px]">
-              <h2 className="text-heading text-3xl uppercase mb-5 lg:mb-20">
+            <div className="text-left dark:text-darkText px-4 mb-10 w-11/12 lg:max-w-[600px]">
+              <h2 className="text-heading dark:text-darkHeading text-3xl uppercase mb-5 lg:mb-20">
                 Contact
               </h2>
               <p className="mb-4 lg:mb-10">
@@ -115,31 +115,16 @@ export default function Conatct() {
                 <AiFillMail /> keitamickaelpro@gmail.com
               </p>
               <SocialNetWork />
-              {/* <ul className="mt-10 text-2xl text-heading flex items-center justify-center lg:justify-evenly gap-5">
-                <li className="cursor-pointer hover:scale-110">
-                  <a href="https://github.com/mickaelk98" target="_blank">
-                    <BsGithub />
-                  </a>
-                </li>
-                <li className="cursor-pointer hover:scale-110">
-                  <a
-                    href="https://www.linkedin.com/in/mickael-keita/"
-                    target="_blank"
-                  >
-                    <BsLinkedin />
-                  </a>
-                </li>
-              </ul> */}
             </div>
             <div className="flex items-center justify-center w-full lg:max-w-[600px]">
               <form
-                className="w-11/12 max-w-[600px] bg-primary rounded-md p-5 flex flex-col gap-8"
+                className="w-11/12 max-w-[600px] bg-primary dark:bg-darkSecondary rounded-md p-5 flex flex-col gap-8"
                 onSubmit={handleSubmit(sendMessage)}
               >
                 <div className="flex flex-col gap-2">
                   <input
                     {...register("name")}
-                    className={`outline-none p-2 text-text border border-tertiary rounded-md ${
+                    className={`outline-none p-2 text-text dark:text-darkText border border-tertiary rounded-md dark:bg-darkSecondary dark:border-darkText ${
                       errors.name ? "border border-error" : ""
                     }`}
                     type="text"
@@ -155,7 +140,7 @@ export default function Conatct() {
                 <div className="flex flex-col gap-2">
                   <input
                     {...register("email")}
-                    className={`outline-none p-2 text-text border border-tertiary rounded-md ${
+                    className={`outline-none p-2 text-text dark:text-darkText border border-tertiary rounded-md dark:bg-darkSecondary dark:border-darkText ${
                       errors.email ? "border border-error" : ""
                     }`}
                     type="email"
@@ -171,7 +156,7 @@ export default function Conatct() {
                 <div className="flex flex-col gap-2">
                   <input
                     {...register("subject")}
-                    className={`outline-none p-2 text-text border border-tertiary rounded-md ${
+                    className={`outline-none p-2 text-text dark:text-darkText border border-tertiary rounded-md dark:bg-darkSecondary dark:border-darkText ${
                       errors.subject ? "border border-error" : ""
                     }`}
                     type="text"
@@ -187,7 +172,7 @@ export default function Conatct() {
                 <div className="flex flex-col gap-2">
                   <textarea
                     {...register("message")}
-                    className={`outline-none p-2 h-40 resize-none text-text border border-tertiary rounded-md ${
+                    className={`outline-none p-2 text-text h-40 dark:text-darkText border border-tertiary rounded-md dark:bg-darkSecondary dark:border-darkText ${
                       errors.message ? "border border-error" : ""
                     }`}
                     placeholder="votre message"

@@ -47,7 +47,7 @@ const socialNetworkVariant = {
 
 export default function HeroSection() {
   return (
-    <section id="home" className="hero-section">
+    <section id="home" className="hero-section dark:bg-darkPrimary">
       <div className="max-w-7xl mx-auto px-2 xl:px-0 h-[calc(100vh_-_68px)] flex flex-col items-start justify-evenly text-center">
         <motion.div
           variants={presentationVariant}
@@ -55,12 +55,12 @@ export default function HeroSection() {
           animate="animate"
           className="lg:text-left"
         >
-          <h1 className="text-3xl mb-10 text-heading">
+          <h1 className="text-3xl mb-10 text-heading dark:text-darkHeading">
             Salut, je suis
             <span className="text-accent">Mickael Keita</span>
             développeur web.
           </h1>
-          <p className="text-text leading-7 mb-10 text-xl">
+          <p className="text-text dark:text-darkText leading-7 mb-10 text-xl">
             Ayant toujours été attiré par la programation et les nouvelles
             technologies, j&apos;ai donc suivi une formation sur OpenClassroom
             afin d&apos;acquérir de solides compétences. Sur ce site, vous

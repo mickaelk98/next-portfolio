@@ -9,14 +9,12 @@
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
 
-body, .mobile-nav {
-  color: rgb(var(--foreground-rgb));
+body, .mobile-nav{
   background: linear-gradient(
       to bottom,
       transparent,
@@ -24,7 +22,3 @@ body, .mobile-nav {
     )
     rgb(var(--background-start-rgb));
 }
-
-/* article {
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-} */

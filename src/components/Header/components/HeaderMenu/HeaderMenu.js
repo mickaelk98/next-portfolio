@@ -35,6 +35,7 @@ export default function HeaderMenu() {
             key={item}
             whileHover={{ scale: 1.2, color: "#004BA8" }}
             transition={{ type: "spring", stiffness: 300 }}
+            className="text-headeing dark:text-darkHeading"
           >
             <Link href={item[1]}>{item[0]}</Link>
           </motion.li>
