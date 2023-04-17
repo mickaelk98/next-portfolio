@@ -3,10 +3,10 @@ import { BsGithub } from "react-icons/bs";
 
 const socialNetworkVariant = {
   initial: {
-    y: "100vh",
+    x: "-100vh",
   },
   animate: {
-    y: 0,
+    x: 0,
   },
   hover: {
     scale: 1.1,
@@ -24,7 +24,7 @@ export default function SocialNetWork() {
         variants={socialNetworkVariant}
         initial="initial"
         animate="animate"
-        transition={{ duration: 2 }}
+        transition={{ duration: 2, delay: 0.3 }}
         whileHover="hover"
         className="text-primary bg-darkSecondary p-2"
       >
@@ -36,7 +36,7 @@ export default function SocialNetWork() {
         variants={socialNetworkVariant}
         initial="initial"
         animate="animate"
-        transition={{ duration: 2, delay: 0.1 }}
+        transition={{ duration: 2, delay: 0.2 }}
         whileHover="hover"
         className="bg-accent text-primary w-[46px] h-[46px] flex items-center justify-center"
       >

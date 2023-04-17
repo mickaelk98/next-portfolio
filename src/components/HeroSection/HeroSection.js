@@ -16,25 +16,12 @@ const presentationVariant = {
   },
 };
 
-// const socialNetworkContainerVariant = {
-//   initial: {
-//     y: "100vh",
-//   },
-//   animate: {
-//     y: 0,
-//     transition: {
-//       duration: 1,
-//       delay: 1,
-//     },
-//   },
-// };
-
 const socialNetworkVariant = {
   initial: {
-    y: "100vh",
+    x: "-100vh",
   },
   animate: {
-    y: 0,
+    x: 0,
   },
   hover: {
     scale: 1.1,
@@ -73,7 +60,7 @@ export default function HeroSection() {
             <SocialNetWork />
             <motion.li
               variants={socialNetworkVariant}
-              transition={{ duration: 2, delay: 0.2 }}
+              transition={{ duration: 2, delay: 0.1 }}
               initial="initial"
               animate="animate"
               whileHover="hover"
@@ -85,7 +72,7 @@ export default function HeroSection() {
             </motion.li>
             <motion.li
               variants={socialNetworkVariant}
-              transition={{ duration: 2, delay: 0.3 }}
+              transition={{ duration: 2 }}
               initial="initial"
               animate="animate"
               whileHover="hover"
