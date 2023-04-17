@@ -47,10 +47,7 @@ const socialNetworkVariant = {
 
 export default function HeroSection() {
   return (
-    <section
-      id="home"
-      className="hero-section bg-[url(/dark-bg.jpg)] bg-center bg-cover "
-    >
+    <section id="home" className="hero-section bg-darkBg bg-center bg-cover ">
       <div className="max-w-7xl mx-auto px-2 xl:px-0 h-[calc(100vh_-_68px)] flex flex-col items-start justify-evenly text-center">
         <motion.div
           variants={presentationVariant}
