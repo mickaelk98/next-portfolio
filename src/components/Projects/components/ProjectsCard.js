@@ -4,7 +4,13 @@ export default function ProjectsCard({ project }) {
   return (
     <article className="mb-10 text-text dark:text-darkHeading dark:bg-darkSecondary max-w-[400px] shadow-lg rounded-md">
       <div className="max-h-44 overflow-hidden">
-        <Image src={project.image} alt="image" width={400} height={400} />
+        <Image
+          src={project.image}
+          alt="image"
+          width={400}
+          height={400}
+          priority={true}
+        />
       </div>
       <div className="p-2">
         <h3 className="uppercase text-heading text-xl">{project.title}</h3>
