@@ -1,19 +1,6 @@
 import { motion } from "framer-motion";
 import { BsGithub } from "react-icons/bs";
 
-// const socialNetworkContainerVariant = {
-//   initial: {
-//     y: "100vh",
-//   },
-//   animate: {
-//     y: 0,
-//     transition: {
-//       duration: 1,
-//       delay: 1,
-//     },
-//   },
-// };
-
 const socialNetworkVariant = {
   initial: {
     y: "100vh",
