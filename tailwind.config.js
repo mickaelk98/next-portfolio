@@ -8,16 +8,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkBg: "#121212",
-        darkSecondary: "#303030",
-        darkTertiary: "#424242",
+        // dark colors
+        darkPrimary: "#121212",
+        darkSecondary: "#1e1e1e",
+        darkTertiary: "#242424",
         darkHeading: "#fefeff",
         darkText: "#bebfbe",
         darkAccent: "#004BA8",
         darkError: "#ED254E",
         darkSuccess: "#37FF8B",
-        darkLinear:
-          "linear-gradient(225deg, rgba(254,254,255,1) 0%, rgba(0,75,168,1) 100%)",
+
+        // white colors
+        primary: "#ffffff",
+        secondary: "#eeeeee",
+        tertiary: "#dddddd",
+        headeing: "#000000",
+        text: "#111111",
+        accent: "#3498db",
+        error: "#FF6978",
+        success: "#09BC8A",
       },
     },
   },

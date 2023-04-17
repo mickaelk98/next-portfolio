@@ -22,7 +22,7 @@ export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
-    <header className="bg-darkBg text-darkHeading">
+    <header className="text-heading">
       <div className="flex items-center justify-between py-4 px-2 xl:px-0 max-w-7xl mx-auto">
         <motion.h1
           variants={headerContentvariant}
@@ -39,7 +39,7 @@ export default function Header() {
           variants={headerContentvariant}
           initial="initial"
           animate="animate"
-          className="text-3xl cursor-pointer hover:text-darkText transition-all duration-300 md:hidden"
+          className="text-3xl cursor-pointer hover:text-text transition-all duration-300 md:hidden"
           onClick={() => setShowMobileMenu(true)}
         >
           <GiHamburgerMenu />

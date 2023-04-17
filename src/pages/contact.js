@@ -6,6 +6,7 @@ import { BsGithub, BsLinkedin, BsFillTelephoneFill } from "react-icons/bs";
 import { AiFillMail, AiFillCheckCircle } from "react-icons/ai";
 import { useState } from "react";
 import Header from "@/components/Header/Header";
+import SocialNetWork from "@/components/SocialNetwork/SocialNetWork";
 
 export default function Conatct() {
   const [isLoading, setIsLoading] = useState(false);
@@ -88,11 +89,11 @@ export default function Conatct() {
       <Header />
       <section
         id="contact"
-        className="bg-darkSecondary text-darkText text-lg py-10 min-h-[calc(100vh_-_68px)] flex flex-col items-center justify-center lg:justify-around"
+        className="text-text text-lg py-10 min-h-[calc(100vh_-_68px)] flex flex-col items-center justify-center lg:justify-around"
       >
         {messageHasBeenSent && (
           <div className="flex items-center justify-center w-full">
-            <div className="flex items-center gap-5 bg-darkSuccess text-darkSecondary w-11/12 max-w-xs pl-2 py-2 rounded-md">
+            <div className="flex items-center gap-5 bg-success text-secondary w-11/12 max-w-xs pl-2 py-2 rounded-md">
               <AiFillCheckCircle /> Votre message a bien été envoyé.
             </div>
           </div>
@@ -100,7 +101,7 @@ export default function Conatct() {
         <div className="px-2 max-w-7xl mx-auto">
           <div className="w-ful flex flex-col lg:flex-row lg:items-start lg:justify-center gap-5">
             <div className="text-left px-4 mb-10 w-11/12 lg:max-w-[600px]">
-              <h2 className="text-darkHeading text-3xl uppercase mb-5 lg:mb-20">
+              <h2 className="text-heading text-3xl uppercase mb-5 lg:mb-20">
                 Contact
               </h2>
               <p className="mb-4 lg:mb-10">
@@ -113,7 +114,8 @@ export default function Conatct() {
               <p className="mb-4 flex gap-3 lg:ml-0 lg:mb-20">
                 <AiFillMail /> keitamickaelpro@gmail.com
               </p>
-              <ul className="mt-10 text-2xl text-darkHeading flex items-center justify-center lg:justify-evenly gap-5">
+              <SocialNetWork />
+              {/* <ul className="mt-10 text-2xl text-heading flex items-center justify-center lg:justify-evenly gap-5">
                 <li className="cursor-pointer hover:scale-110">
                   <a href="https://github.com/mickaelk98" target="_blank">
                     <BsGithub />
@@ -127,24 +129,24 @@ export default function Conatct() {
                     <BsLinkedin />
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
             <div className="flex items-center justify-center w-full lg:max-w-[600px]">
               <form
-                className="w-11/12 max-w-[600px] bg-darkTertiary rounded-md p-5 flex flex-col gap-8"
+                className="w-11/12 max-w-[600px] bg-primary rounded-md p-5 flex flex-col gap-8"
                 onSubmit={handleSubmit(sendMessage)}
               >
                 <div className="flex flex-col gap-2">
                   <input
                     {...register("name")}
-                    className={`outline-none p-2 text-darkSecondary ${
-                      errors.name ? "border border-darkError" : ""
+                    className={`outline-none p-2 text-text border border-tertiary rounded-md ${
+                      errors.name ? "border border-error" : ""
                     }`}
                     type="text"
                     placeholder="votre nom"
                   />
                   {errors.name && (
-                    <small className="text-darkError text-lg text-center">
+                    <small className="text-error text-lg text-center">
                       {errors.name.message}
                     </small>
                   )}
@@ -153,14 +155,14 @@ export default function Conatct() {
                 <div className="flex flex-col gap-2">
                   <input
                     {...register("email")}
-                    className={`outline-none p-2 text-darkSecondary ${
-                      errors.email ? "border border-darkError" : ""
+                    className={`outline-none p-2 text-text border border-tertiary rounded-md ${
+                      errors.email ? "border border-error" : ""
                     }`}
                     type="email"
                     placeholder="votre email"
                   />
                   {errors.email && (
-                    <small className="text-darkError text-lg text-center">
+                    <small className="text-error text-lg text-center">
                       {errors.email.message}
                     </small>
                   )}
@@ -169,14 +171,14 @@ export default function Conatct() {
                 <div className="flex flex-col gap-2">
                   <input
                     {...register("subject")}
-                    className={`outline-none p-2 text-darkSecondary ${
-                      errors.subject ? "border border-darkError" : ""
+                    className={`outline-none p-2 text-text border border-tertiary rounded-md ${
+                      errors.subject ? "border border-error" : ""
                     }`}
                     type="text"
                     placeholder="Le sujet de votre message"
                   />
                   {errors.subject && (
-                    <small className="text-darkError text-lg text-center">
+                    <small className="text-error text-lg text-center">
                       {errors.subject.message}
                     </small>
                   )}
@@ -185,13 +187,13 @@ export default function Conatct() {
                 <div className="flex flex-col gap-2">
                   <textarea
                     {...register("message")}
-                    className={`outline-none p-2 h-40 resize-none text-darkSecondary ${
-                      errors.message ? "border border-darkError" : ""
+                    className={`outline-none p-2 h-40 resize-none text-text border border-tertiary rounded-md ${
+                      errors.message ? "border border-error" : ""
                     }`}
                     placeholder="votre message"
                   ></textarea>
                   {errors.message && (
-                    <small className="text-darkError text-lg text-center">
+                    <small className="text-error text-lg text-center">
                       {errors.message.message}
                     </small>
                   )}
@@ -199,13 +201,13 @@ export default function Conatct() {
 
                 {isLoading ? (
                   <button
-                    className="bg-darkAccent/50 transition-all duration-300 uppercase text-darkHeading p-2 flex items-center justify-center gap-5"
+                    className="bg-accent/50 transition-all rounded-md duration-300 uppercase text-heading p-2 flex items-center justify-center gap-5"
                     disabled
                   >
                     <div className="w-5 h-5 border-2 border-l-0 border-white rounded-full animate-spin"></div>
                   </button>
                 ) : (
-                  <button className="bg-darkAccent hover:bg-darkAccent/70 transition-all duration-300 uppercase text-darkHeading p-2">
+                  <button className="bg-accent rounded-md  hover:bg-accent/70 transition-all duration-300 uppercase text-heading p-2">
                     Envoyer
                   </button>
                 )}

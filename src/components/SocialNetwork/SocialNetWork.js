@@ -26,7 +26,7 @@ export default function SocialNetWork() {
         animate="animate"
         transition={{ duration: 2 }}
         whileHover="hover"
-        className="text-darkText bg-darkSecondary p-2"
+        className="text-primary bg-darkSecondary p-2"
       >
         <a href="https://github.com/mickaelk98" target="_blank">
           <BsGithub />
@@ -38,10 +38,10 @@ export default function SocialNetWork() {
         animate="animate"
         transition={{ duration: 2, delay: 0.1 }}
         whileHover="hover"
-        className="bg-darkAccent w-[46px] h-[46px] flex items-center justify-center"
+        className="bg-accent text-primary w-[46px] h-[46px] flex items-center justify-center"
       >
         <a href="https://www.linkedin.com/in/mickael-keita/" target="_blank">
-          <span className="font-bold text-darkHeading m-auto">in</span>
+          <span className="font-bold text-heading m-auto">in</span>
         </a>
       </motion.li>
     </ul>
