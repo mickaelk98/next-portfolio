@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <header className="text-heading dark:text-darkHeading dark:bg-darkPrimary">
-      <div className="flex items-center justify-between py-4 px-2 xl:px-0 max-w-7xl mx-auto">
+      <div className="flex items-center justify-between py-4 px-2 md:px-4 xl:px-0 max-w-7xl mx-auto">
         <motion.h1
           variants={headerContentvariant}
           transition={{ stiffness: 300, type: "spring" }}
