@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { BsGithub } from "react-icons/bs";
 import { FcContacts } from "react-icons/fc";
+import SocialNetWork from "../SocialNetwork/SocialNetWork";
 
 const presentationVariant = {
   initial: {
@@ -16,20 +16,26 @@ const presentationVariant = {
   },
 };
 
-const socialNetworkContainerVariant = {
+// const socialNetworkContainerVariant = {
+//   initial: {
+//     y: "100vh",
+//   },
+//   animate: {
+//     y: 0,
+//     transition: {
+//       duration: 1,
+//       delay: 1,
+//     },
+//   },
+// };
+
+const socialNetworkVariant = {
   initial: {
     y: "100vh",
   },
   animate: {
     y: 0,
-    transition: {
-      duration: 1,
-      delay: 1,
-    },
   },
-};
-
-const socialNetworkVariant = {
   hover: {
     scale: 1.1,
     transition: {
@@ -66,35 +72,13 @@ export default function HeroSection() {
           </p>
         </motion.div>
         <div>
-          <motion.ul
-            variants={socialNetworkContainerVariant}
-            initial="initial"
-            animate="animate"
-            className="text-3xl flex items-center gap-2"
-          >
+          <ul className="text-3xl flex items-center gap-2">
+            <SocialNetWork />
             <motion.li
               variants={socialNetworkVariant}
-              whileHover="hover"
-              className="text-darkText bg-darkSecondary p-2"
-            >
-              <a href="https://github.com/mickaelk98" target="_blank">
-                <BsGithub />
-              </a>
-            </motion.li>
-            <motion.li
-              variants={socialNetworkVariant}
-              whileHover="hover"
-              className="bg-darkAccent w-[46px] h-[46px] flex items-center justify-center"
-            >
-              <a
-                href="https://www.linkedin.com/in/mickael-keita/"
-                target="_blank"
-              >
-                <span className="font-bold text-darkHeading m-auto">in</span>
-              </a>
-            </motion.li>
-            <motion.li
-              variants={socialNetworkVariant}
+              transition={{ duration: 2, delay: 0.2 }}
+              initial="initial"
+              animate="animate"
               whileHover="hover"
               className="bg-darkSecondary p-2"
             >
@@ -104,12 +88,15 @@ export default function HeroSection() {
             </motion.li>
             <motion.li
               variants={socialNetworkVariant}
+              transition={{ duration: 2, delay: 0.3 }}
+              initial="initial"
+              animate="animate"
               whileHover="hover"
               className="bg-darkSecondary w-[46px] h-[46px] flex items-center justify-center cursor-pointer text-darkHeading font-bold p-2"
             >
               cv
             </motion.li>
-          </motion.ul>
+          </ul>
         </div>
       </div>
     </section>

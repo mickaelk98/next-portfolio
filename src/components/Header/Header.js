@@ -11,9 +11,10 @@ const headerContentvariant = {
   },
   animate: {
     y: 0,
-    transition: {
-      duration: 0.7,
-    },
+  },
+  hover: {
+    scale: 1.1,
+    color: "#004BA8",
   },
 };
 
@@ -25,9 +26,11 @@ export default function Header() {
       <div className="flex items-center justify-between py-4 px-2 xl:px-0 max-w-7xl mx-auto">
         <motion.h1
           variants={headerContentvariant}
+          transition={{ stiffness: 300, type: "spring" }}
+          whileHover="hover"
           initial="initial"
           animate="animate"
-          className="text-3xl cursor-pointer hover:text-darkText transition-all duration-300"
+          className="text-3xl cursor-pointer"
         >
           <Link href="/">Mickael Keita</Link>
         </motion.h1>
