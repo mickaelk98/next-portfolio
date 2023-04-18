@@ -92,19 +92,10 @@ export default function Conatct() {
     <>
       <Head>
         <title>Mickael Keita - Portfolio | Contact</title>
-        <meta
-          name="description"
-          content="Bienvenue sur mon portfolio, je suis mickael keita jeune développeur web formé chez openclassroom sur ce site vous verrez différents projets que j'ai réalisé et vous pourrez me contacter directement, alors n'hésitez pas."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/images/logo.png" />
       </Head>
       <TransitionEffect />
       <Header />
-      <section
-        id="contact"
-        className="text-text dark:bg-darkPrimary text-lg py-10 min-h-[calc(100vh_-_68px)] flex flex-col items-center justify-center lg:justify-around"
-      >
+      <section className="text-lg py-10 min-h-[calc(100vh_-_68px)] flex flex-col items-center justify-center lg:justify-around">
         <AnimatePresence>
           {messageHasBeenSent && (
             <motion.div
