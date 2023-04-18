@@ -1,6 +1,6 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import HeaderMenu from "@/components/Header/components/HeaderMenu/HeaderMenu";
 import HeaderMobileMenu from "@/components/Header/components/HeaderMobileMenu/HeaderMobileMenu";
 import Link from "next/link";
@@ -49,11 +49,13 @@ export default function Header() {
         </motion.span>
         <HeaderMenu />
 
-        {showMobileMenu && (
-          <HeaderMobileMenu
-            hideHeaderMobileMenu={() => setShowMobileMenu(false)}
-          />
-        )}
+        <AnimatePresence>
+          {showMobileMenu && (
+            <HeaderMobileMenu
+              hideHeaderMobileMenu={() => setShowMobileMenu(false)}
+            />
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );
