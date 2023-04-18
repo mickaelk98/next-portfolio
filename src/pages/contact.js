@@ -3,12 +3,13 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { send } from "@emailjs/browser";
-import { BsGithub, BsLinkedin, BsFillTelephoneFill } from "react-icons/bs";
+import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiFillMail, AiFillCheckCircle } from "react-icons/ai";
 import { useState } from "react";
 import Header from "@/components/Header/Header";
 import SocialNetWork from "@/components/SocialNetwork/SocialNetWork";
 import TransitionEffect from "@/components/TransitionEffect/TransitionEffect";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Conatct() {
   const [isLoading, setIsLoading] = useState(false);
@@ -77,6 +78,7 @@ export default function Conatct() {
         reset();
         setIsLoading(false);
         setMessagehasBeenSent(true);
+
         setTimeout(() => {
           setMessagehasBeenSent(false);
         }, 3000);
@@ -103,13 +105,29 @@ export default function Conatct() {
         id="contact"
         className="text-text dark:bg-darkPrimary text-lg py-10 min-h-[calc(100vh_-_68px)] flex flex-col items-center justify-center lg:justify-around"
       >
-        {messageHasBeenSent && (
-          <div className="flex items-center justify-center w-full">
-            <div className="flex items-center gap-5 bg-success text-text dark:text-secondary w-11/12 max-w-xs pl-2 py-2 rounded-md">
-              <AiFillCheckCircle /> Votre message a bien été envoyé.
-            </div>
-          </div>
-        )}
+        <AnimatePresence>
+          {messageHasBeenSent && (
+            <motion.div
+              initial={{ x: "-100vh" }}
+              animate={{ x: 0 }}
+              transition={{ duration: 1.5 }}
+              exit={{ x: "-100vh", transition: { duration: 1.5, delay: 1.6 } }}
+              className="flex items-center justify-center w-full"
+            >
+              <div className="flex flex-col items-center gap-5 bg-success text-text dark:text-secondary w-11/12 max-w-xs rounded-md">
+                <div className="flex items-center justify-between pl-2 py-2">
+                  <AiFillCheckCircle /> Votre message a bien été envoyé.
+                </div>
+                <motion.div
+                  initial={{ width: "100%", backgroundColor: "#ffffff" }}
+                  animate={{ width: "0%", backgroundColor: "ffffff" }}
+                  transition={{ duration: 3, delay: 1.6 }}
+                  className="h-1 w-full"
+                ></motion.div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
         <div className="px-2 max-w-7xl mx-auto">
           <div className="w-ful flex flex-col lg:flex-row lg:items-start lg:justify-center gap-5">
             <div className="text-left dark:text-darkText px-4 mb-10 w-11/12 lg:max-w-[600px]">

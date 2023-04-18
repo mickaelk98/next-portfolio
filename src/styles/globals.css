@@ -14,7 +14,7 @@
 }
 
 
-body, .mobile-nav{
+body {
   background: linear-gradient(
       to bottom,
       transparent,
