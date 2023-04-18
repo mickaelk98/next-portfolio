@@ -148,7 +148,7 @@ export default function Conatct() {
             </div>
             <div className="flex items-center justify-center w-full lg:max-w-[600px]">
               <form
-                className="w-11/12 max-w-[600px] bg-primary dark:bg-darkSecondary rounded-md p-5 flex flex-col gap-8"
+                className="w-11/12 max-w-[600px] bg-primary dark:bg-darkSecondary rounded-md p-5 mb-10 lg:mb-0 shadow-md flex flex-col gap-8"
                 onSubmit={handleSubmit(sendMessage)}
               >
                 <div className="flex flex-col gap-2">
@@ -202,7 +202,7 @@ export default function Conatct() {
                 <div className="flex flex-col gap-2">
                   <textarea
                     {...register("message")}
-                    className={`outline-none p-2 text-text h-40 dark:text-darkText border border-tertiary rounded-md dark:bg-darkSecondary dark:border-darkText ${
+                    className={`outline-none p-2 text-text h-40 dark:text-darkText border border-tertiary rounded-md dark:bg-darkSecondary dark:border-darkText resize-none ${
                       errors.message ? "border border-error" : ""
                     }`}
                     placeholder="votre message"
