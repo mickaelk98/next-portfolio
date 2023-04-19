@@ -32,15 +32,21 @@ export default function HeaderMobileMenu({ hideHeaderMobileMenu }) {
       exit={{ x: "100%" }}
       className="dark:bg-darkPrimary dark:bg-none bg-gradient-to-b from-[#D6DBDC] to-white dark:text-darkHeading z-10 fixed top-0 left-0 h-screen w-full text-black flex flex-col items-end"
     >
-      <RxCross1
-        className="text-5xl mt-5 mr-5 cursor-pointer hover:text-darkText transition-all duration-300"
-        onClick={() => {
-          setTimeout(() => {
-            hideHeaderMobileMenu();
-          }, 1000);
-          cycleAnimation();
+      <motion.span
+        whileHover={{
+          color: darkMode ? "#004BA8" : "#3498db",
         }}
-      />
+      >
+        <RxCross1
+          className={`text-5xl mt-5 mr-5 cursor-pointer`}
+          onClick={() => {
+            setTimeout(() => {
+              hideHeaderMobileMenu();
+            }, 1000);
+            cycleAnimation();
+          }}
+        />
+      </motion.span>
       <ul className="flex items-center justify-center flex-col gap-24 text-5xl h-screen w-full">
         {liText.map((item, i) => (
           <motion.li
