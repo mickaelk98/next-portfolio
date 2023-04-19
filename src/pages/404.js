@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <>
       <TransitionEffect />
-      <main className="h-screen bg-[url(/images/404-bg.jpg)] bg-center bg-cover text-2xl text-heading flex flex-col items-center justify-center">
+      <main className="h-screen bg-[url(/images/404-bg.jpg)] bg-center bg-cover text-2xl text-primary flex flex-col items-center justify-center">
         <span>404</span>
         <h1 className="font-bold text-5xl text-center">Page introuvable</h1>
         <span>
