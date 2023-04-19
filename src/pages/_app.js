@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Header from "@/components/Header/Header";
+import ThemeProvider from "@/components/ThemeProvider/ThemeProvider";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -19,13 +20,15 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/logo.png" />
       </Head>
-      <main
-        className={`${montserrat.className} text-text dark:text-darkHeading dark:bg-darkPrimary dark:bg-none bg-gradient-to-b from-[#D6DBDC] to-white`}
-      >
-        <AnimatePresence mode="wait">
-          <Component key={router.asPath} {...pageProps} />;
-        </AnimatePresence>
-      </main>
+      <ThemeProvider>
+        <main
+          className={`${montserrat.className} text-text dark:text-darkHeading dark:bg-darkPrimary dark:bg-none bg-gradient-to-b from-[#D6DBDC] to-white`}
+        >
+          <AnimatePresence mode="wait">
+            <Component key={router.asPath} {...pageProps} />;
+          </AnimatePresence>
+        </main>
+      </ThemeProvider>
     </>
   );
 }

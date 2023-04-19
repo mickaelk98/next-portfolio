@@ -1,20 +1,9 @@
 import Link from "next/link";
 import { motion, useCycle } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
-
-// const liVariant = {
-//   initial: {
-//     x: "-100vh",
-//   },
-//   hover: {
-//     scale: 1.2,
-//     color: "#004BA8",
-//     transition: {
-//       stiffness: 300,
-//       type: "spring",
-//     },
-//   },
-// };
+import { useContext } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
+import { useRouter } from "next/router";
 
 const liVariant = {
   onEnter: {
@@ -23,19 +12,12 @@ const liVariant = {
   onLeave: {
     x: ["0vw", "100vw"],
   },
-  hover: {
-    scale: 1.2,
-    color: "#004BA8",
-    transition: {
-      stiffness: 300,
-      type: "spring",
-      delay: 0,
-    },
-  },
 };
 
 export default function HeaderMobileMenu({ hideHeaderMobileMenu }) {
   const [animate, cycleAnimation] = useCycle(true, false);
+  const { darkMode, switchMode } = useContext(ThemeContext);
+  const router = useRouter();
   const liText = [
     ["Accueil", "/"],
     ["Projets", "/projects"],
@@ -65,8 +47,24 @@ export default function HeaderMobileMenu({ hideHeaderMobileMenu }) {
             variants={liVariant}
             transition={{ x: { duration: 0.6, delay: 0.6 + i / 10 } }}
             animate={animate ? "onEnter" : "onLeave"}
-            whileHover="hover"
-            className="dark:text-darkHeading"
+            whileHover={{
+              scale: 1.2,
+              color: darkMode ? "#004BA8" : "#3498db",
+              transition: {
+                stiffness: 300,
+                type: "spring",
+                delay: 0,
+              },
+            }}
+            className={`${
+              darkMode
+                ? router.pathname === item[1]
+                  ? "text-darkAccent"
+                  : "text-darkHeading"
+                : router.pathname === item[1]
+                ? "text-accent"
+                : "text-text"
+            }`}
             key={item}
           >
             <Link href={item[1]}>{item[0]}</Link>

@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
+import { useRouter } from "next/router";
 
 const headerContentvariant = {
   initial: {
@@ -16,6 +19,8 @@ const headerContentvariant = {
 };
 
 export default function HeaderMenu() {
+  const { darkMode, switchMode } = useContext(ThemeContext);
+  const router = useRouter();
   const liText = [
     ["Accueil", "/"],
     ["Projets", "/projects"],
@@ -33,8 +38,20 @@ export default function HeaderMenu() {
           <motion.li
             variants={headerContentvariant}
             key={item}
-            whileHover={{ scale: 1.2, color: "#004BA8" }}
+            whileHover={{
+              scale: 1.2,
+              color: darkMode ? "#004BA8" : "#3498db",
+            }}
             transition={{ type: "spring", stiffness: 300 }}
+            className={`${
+              darkMode
+                ? router.pathname === item[1]
+                  ? "text-darkAccent"
+                  : "text-darkHeading"
+                : router.pathname === item[1]
+                ? "text-accent"
+                : "text-text"
+            }`}
           >
             <Link href={item[1]}>{item[0]}</Link>
           </motion.li>
