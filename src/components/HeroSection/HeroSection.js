@@ -42,7 +42,7 @@ export default function HeroSection() {
           animate="animate"
           className="lg:text-left"
         >
-          <h1 className="text-3xl mb-10 text-heading dark:text-darkHeading">
+          <h1 className="text-3xl mb-10 text-heading dark:text-darkHeading font-bold">
             Salut, je suis
             <span className="text-accent">Mickael Keita</span>
             développeur web.
