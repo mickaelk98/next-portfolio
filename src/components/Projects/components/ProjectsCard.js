@@ -1,8 +1,14 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function ProjectsCard({ project }) {
   return (
-    <article className="mb-10 text-text dark:text-darkHeading dark:bg-darkSecondary max-w-[420px] shadow-lg rounded-md">
+    <motion.article
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1, duration: 1 }}
+      className="mb-10 text-text dark:text-darkHeading dark:bg-darkSecondary max-w-[400px] text-[15px] shadow-lg rounded-md"
+    >
       <div className="max-h-48 overflow-hidden">
         <Image
           src={project.image}
@@ -33,6 +39,6 @@ export default function ProjectsCard({ project }) {
           </a>
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 }

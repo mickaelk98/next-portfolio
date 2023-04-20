@@ -78,7 +78,9 @@ export default function HeroSection() {
               whileHover="hover"
               className="bg-darkSecondary text-primary w-[46px] h-[46px] flex items-center justify-center cursor-pointer text-heading font-bold p-2"
             >
-              cv
+              <a href="/cv.pdf" download>
+                cv
+              </a>
             </motion.li>
           </ul>
         </div>
