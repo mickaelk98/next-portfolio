@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import Header from "@/components/Header/Header";
+import { Analytics } from "@vercel/analytics/react";
 import ThemeProvider from "@/components/ThemeProvider/ThemeProvider";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -27,6 +27,7 @@ export default function App({ Component, pageProps }) {
           <AnimatePresence mode="wait">
             <Component key={router.asPath} {...pageProps} />;
           </AnimatePresence>
+          <Analytics />
         </main>
       </ThemeProvider>
     </>
