@@ -48,11 +48,9 @@ export default function HeroSection() {
             développeur web.
           </h1>
           <p className="text-text dark:text-darkText leading-7 mb-10 text-xl">
-            Ayant toujours été attiré par la programation et les nouvelles
-            technologies, j&apos;ai donc suivi une formation sur OpenClassroom
-            afin d&apos;acquérir de solides compétences. Sur ce site, vous
-            verrez différents projets que j&apos;ai réalisés sur des
-            technologies telles que JAVASCRIPT et REACT
+            Depuis toujours attiré par la programmation et les nouvelles technologies, j&apos;ai décidé de transformer cette passion en
+            compétences en suivant une formation sur OpenClassrooms, et je poursuis désormais un Bachelor Développeur Web chez myDigitalSchool.
+            Sur mon site web, vous trouverez plusieurs projets dynamiques et performants que j&apos;ai réalisés, tant dans le cadre de ma formation que lors de projets personnels. Ceux-ci vont de la création de sites vitrines à des sites e-commerce, en passant par des réseaux sociaux.
           </p>
         </motion.div>
         <div>
