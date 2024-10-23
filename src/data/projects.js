@@ -31,13 +31,12 @@ const projects = [
   },
   {
     id: 4,
-    title: "groupomania",
-    image: "/images/groupomania.png",
+    title: "créaweb",
+    image: "/images/creaweb.png",
     imageDescription: "photo du projet",
-    technologies: ["react", "docker", "nodejs", "mongodb", "ngnix"],
-    description: "Réseau social pour une entreprise fictive",
-    codeLink: "https://github.com/mickaelk98/groupomania-mearn",
-    siteLink: "https://groupomania.site/",
+    technologies: ["wordpress"],
+    description: "site web d'une agence spécialisé dans la creation de site wordpress",
+    siteLink: "https://creaweb.tech/",
   },
 ];
 
