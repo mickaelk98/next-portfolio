@@ -35,9 +35,9 @@ export default function ProjectsCard({ project }) {
             </a>
           )}
           <a href={project.codeLink} target="_blank">
-            <button className="bg-accent hover:bg-accent/70 transition-all duration-300 uppercase text-heading p-2">
+            {project.codeLink && <button className="bg-accent hover:bg-accent/70 transition-all duration-300 uppercase text-heading p-2">
               Voir le code
-            </button>
+            </button>}
           </a>
         </div>
       </div>
