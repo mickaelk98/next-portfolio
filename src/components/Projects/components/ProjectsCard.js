@@ -26,12 +26,14 @@ export default function ProjectsCard({ project }) {
           ))}
         </ul>
         <p className="mb-4 dark:text-darkText">{project.description}</p>
-        <div className="my-2 flex justify-between flex-wrap gap-y-4">
-          <a href={project.siteLink} target="_blank">
-            <button className="bg-accent hover:bg-accent/70 transition-all duration-300 uppercase text-heading p-2">
-              Voir le projet
-            </button>
-          </a>
+        <div className={`my-2 flex ${project.siteLink ? "justify-between" : "justify-center"} flex-wrap gap-y-4`}>
+          {project.siteLink && (
+            <a href={project.siteLink} target="_blank">
+              <button className="bg-accent hover:bg-accent/70 transition-all duration-300 uppercase text-heading p-2">
+                Voir le site
+              </button>
+            </a>
+          )}
           <a href={project.codeLink} target="_blank">
             <button className="bg-accent hover:bg-accent/70 transition-all duration-300 uppercase text-heading p-2">
               Voir le code
